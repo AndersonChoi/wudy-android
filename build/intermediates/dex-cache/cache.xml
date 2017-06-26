@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/ed62f6ee83572d408114e918978e57a06e9fae90/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_78bc470c34dfff11b36b7e3726d289120f09cd1b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/8e923a321354219604ccb826ee3f29471d2ce8c8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a405f8101fa8db334e2b9df498c7b24563795b00/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/0e243b896b8e532268d15badf987eb56e02c6411/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c096f840a44cc7f99dfbf49f25942e86e47df9d5">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ea6f987b981ae131a0becefd3294680f1d5000b0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.0/a7537446a030da8eb0da4c71424d16c2589f6c4a/glide-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a7537446a030da8eb0da4c71424d16c2589f6c4a">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.6.0_745532e7f4ceb589de80451022f034eae8690c7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/ed23ae6aee2b4ccdba84fa8b73837e9fe3b07b18/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_26b0c9ca3af0533e3867d8726205225851acdb68/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0df81dcbc8ea6be372eadcc6f51e42cd25630187">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5095ac91767cd52194388940f3d33b105764bdc9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/78642f0483c35dbc0a66368e58c40b15cd95e414/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f12d09bf6e8cbccfd699e18a39e8ee3999c9bd98/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_ea5a257885eb8e2f97e27b2c139a0a97ec74a014/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.0.0-alpha1_c6db0cb5bcc99a1465868f87f6929faa470f3200/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/9bd8e54b5db63fe34cd12dc24c2832d7f7410a05/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eaf962aa6f38f3779ab4a6a0cb33f499c67feeba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/dd176eec7392867ad011897f94c691cdb574c77d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_78133fa4b6e684d16b4b0ca63ab02dba4a3fb211/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/0dae91443582336dfe02c865b90cb5a288fd7024/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_95003c6670ecb47dd7f4dc1bcd50a4d873ea5efe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/9ccc9665b58cb1532477ec50c4f93891d3af9832/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_824ddbb1459e70f2e84a2347764f6497577fddc7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/b55b82f0e86d15712c9c642a3b7b24bda7bc5c6a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_552f642abe5728468f253a66fd4096204d44834c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/5dadafd92d473d6070368917d017337b375c4de3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="27c6f134320940501b417f68d8e6aa5d4675f651">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f8e9d373dde0839b5a7911e9ac3c62632e1f549f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_ab48d3da8a7a28cae32a5d540249da2c20aaa381/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/anderson/.android/build-cache/02fdefcc3d2b9bf13a15f32957b3a34288f7580b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/anderson/AndroidStudioProjects/NewsMakers/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_815b74f469c76e474c6290450c77a455e800a0bf/classes.dex" />
+    </item>
+
+</items>
