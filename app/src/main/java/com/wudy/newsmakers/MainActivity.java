@@ -22,7 +22,7 @@ import com.sdsmdg.harjot.rotatingtext.RotatingTextWrapper;
 import com.sdsmdg.harjot.rotatingtext.models.Rotatable;
 import com.wudy.newsmakers.list.MainListViewAdaptor;
 
-//test
+//webhook test
 public class MainActivity extends Activity {
 
     private RelativeLayout mainTitleLayout;
