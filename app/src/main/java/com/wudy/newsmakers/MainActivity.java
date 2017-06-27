@@ -22,7 +22,7 @@ import com.sdsmdg.harjot.rotatingtext.RotatingTextWrapper;
 import com.sdsmdg.harjot.rotatingtext.models.Rotatable;
 import com.wudy.newsmakers.list.MainListViewAdaptor;
 
-//webhook test
+//webhook test2
 public class MainActivity extends Activity {
 
     private RelativeLayout mainTitleLayout;
@@ -30,7 +30,6 @@ public class MainActivity extends Activity {
     private MainListViewAdaptor adapter;
     private boolean titleFlag = true;
     private boolean transitionFlag = true;
-
 
 
     @Override
