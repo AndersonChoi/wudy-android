@@ -20,6 +20,6 @@ public class PagerTransFormer implements ViewPager.PageTransformer {
 
         backgroundImageView.setTranslationX(-position * (pageWidth));
         titleView.setTranslationX((position) * (pageWidth / 3));
-        descriptionView.setTranslationX((position) * (pageWidth / 2));
+        descriptionView.setTranslationX((position) * (pageWidth / 1.5f));
     }
 }

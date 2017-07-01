@@ -74,7 +74,7 @@ public class MainActivity extends FragmentActivity {
             }
         };
         pageAnimationHandler = new Handler();
-        pageAnimationHandler.postDelayed(pageAnimationRunnable, 500);
+        pageAnimationHandler.postDelayed(pageAnimationRunnable, 1000);
 
     }
 

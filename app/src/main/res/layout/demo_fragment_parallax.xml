@@ -42,12 +42,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/menu_icon"
-            app:backgroundTint="#ff3000" />
+            app:backgroundTint="#d35400" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#522452">
+            android:background="#2c3e50">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -65,6 +65,12 @@
                     style="@style/ogDescriptionStyle"
                     android:text="description" />
             </LinearLayout>
+            <Button
+                android:id="@+id/show_article_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00ffffff"
+                />
 
         </RelativeLayout>
 
@@ -87,6 +93,7 @@
                         android:layout_height="match_parent">
 
                         <net.steamcrafted.materialiconlib.MaterialIconView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/share_article_icon"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_centerInParent="true"
@@ -107,6 +114,7 @@
                         android:layout_height="match_parent">
 
                         <net.steamcrafted.materialiconlib.MaterialIconView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/like_article_icon"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_centerInParent="true"
@@ -135,6 +143,12 @@
                             app:materialIcon="close_circle"
                             app:materialIconColor="#fff"
                             app:materialIconSize="24dp" />
+                        <Button
+                            android:layout_centerInParent="true"
+                            android:id="@+id/fab_exit_button"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="#00ffffff"/>
                     </RelativeLayout>
                 </LinearLayout>
 
