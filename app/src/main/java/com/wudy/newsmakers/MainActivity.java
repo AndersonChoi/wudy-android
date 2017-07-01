@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.MotionEventCompat;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
 import com.truizlop.fabreveallayout.FABRevealLayout;
@@ -18,7 +20,11 @@ import com.wudy.newsmakers.pager.ParallaxFragment;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import me.relex.circleindicator.CircleIndicator;
+
 public class MainActivity extends FragmentActivity {
+    public final static String ARTICLE_TITLE_VIEW = "ARTICLE_TITLE_VIEW";
+    public final static String ARTICLE_WEB_VIEW = "ARTICLE_WEB_VIEW";
 
     private static boolean IS_ANIMATE_PAGER = false;
     private static int ANIMATE_NEXT_PAGER_X = 70;
@@ -29,6 +35,7 @@ public class MainActivity extends FragmentActivity {
     private int positionX = 1;
     private Handler pageAnimationHandler;
     private Runnable pageAnimationRunnable;
+    private CircleIndicator indicator;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,11 +43,12 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
 
         viewPager = (ViewPager) findViewById(R.id.pager);
-
+        indicator = (CircleIndicator) findViewById(R.id.indicator);
         setMainParallaxPager();
         setPagerDatas();
 
         viewPager.setAdapter(mAdapter);
+        indicator.setViewPager(viewPager);
 
     }
 
@@ -52,14 +60,14 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void run() {
 
-                if(!IS_ANIMATE_PAGER) {
+                if (!IS_ANIMATE_PAGER) {
                     viewPager.setScrollX(positionX);
                     Log.e("scroll", "positionX:" + positionX);
                     positionX = positionXCount < ANIMATE_NEXT_PAGER_X ? positionXCount + 1 : (ANIMATE_NEXT_PAGER_X * 2) - positionXCount;
                     positionXCount++;
 
                     if (positionX == 0) {
-                        IS_ANIMATE_PAGER=true;
+                        IS_ANIMATE_PAGER = true;
                         return;
                     }
 
@@ -98,6 +106,7 @@ public class MainActivity extends FragmentActivity {
         mAdapter = new ParallaxAdapter(getSupportFragmentManager());
         mAdapter.setPager(viewPager);
     }
+
 
 
 }

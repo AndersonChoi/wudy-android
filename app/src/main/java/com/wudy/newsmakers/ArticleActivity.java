@@ -1,31 +1,55 @@
 package com.wudy.newsmakers;
 
-import android.graphics.Color;
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.webkit.WebView;
+import android.widget.TextView;
 
-import com.liuguangqiang.swipeback.SwipeBackActivity;
-import com.liuguangqiang.swipeback.SwipeBackLayout;
+import com.wudy.newsmakers.opengraph.OpenGraphVO;
+import android.webkit.WebViewClient;
 
-public class ArticleActivity extends SwipeBackActivity {
+public class ArticleActivity extends Activity {
 
-    private WebView webView;
+
+    private TextView articleTitle;
+    private Intent intent;
+    private View activityTransitionView;
+    private Typeface font;
+    private OpenGraphVO articleData;
+    private WebView mWebView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article);
-        setDragEdge(SwipeBackLayout.DragEdge.TOP);
+
+        articleTitle = (TextView) findViewById(R.id.article_title_text);
+        mWebView = (WebView) findViewById(R.id.article_webview);
+
+        font = Typeface.createFromAsset(getAssets(), "fonts/BMDOHYEON_ttf.ttf");
+        articleTitle.setTypeface(font);
+
+        intent = getIntent();
+        articleData = (OpenGraphVO) intent.getSerializableExtra("openGraphVO");
 
 
-        initViews();
+        articleTitle.setText(articleData.getOgTitle());
+
+        activityTransitionView = findViewById(R.id.article_summary_layout_top);
+        activityTransitionView.setTransitionName(MainActivity.ARTICLE_TITLE_VIEW);
+        mWebView.setTransitionName(MainActivity.ARTICLE_WEB_VIEW);
+
+
+
+
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.loadUrl(articleData.getOgUrl().replaceAll("entertain", "m.entertain"));
+        mWebView.setWebViewClient(new WebViewClient());
+
+
     }
-
-    private void initViews() {
-        webView = (WebView) findViewById(R.id.webview);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://github.com");
-    }
-
 }

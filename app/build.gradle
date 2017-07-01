@@ -32,5 +32,6 @@ dependencies {
     compile 'org.projectlombok:lombok:1.16.16'
     compile 'com.daimajia.easing:library:2.0@aar'
     compile 'com.daimajia.androidanimations:library:2.2@aar'
-    compile 'com.github.liuguangqiang.swipeback:library:1.0.2@aar'
+    compile 'me.relex:circleindicator:1.2.2@aar'
+    compile 'com.sothree.slidinguppanel:library:3.3.1'
 }
