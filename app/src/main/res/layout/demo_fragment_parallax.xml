@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom"
-        sothree:umanoPanelHeight="35dp"
+        sothree:umanoPanelHeight="30dp"
         sothree:umanoShadowHeight="4dp">
 
         <RelativeLayout
@@ -22,7 +23,8 @@
             <RelativeLayout
                 android:id="@+id/parallaxContent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:elevation="1dp">
 
                 <ImageView
                     android:id="@+id/main_background_image"
@@ -30,7 +32,6 @@
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:contentDescription="@string/demo_parallax_description"
                     android:scaleType="centerCrop" />
 
 
@@ -57,24 +58,22 @@
                 </RelativeLayout>
             </RelativeLayout>
 
-            <com.truizlop.fabreveallayout.FABRevealLayout
-                android:id="@+id/fab_reveal_layout"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="110dp">
 
-                <android.support.design.widget.FloatingActionButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/menu_icon"
-                    app:backgroundTint="#d35400" />
+            <RelativeLayout
+                android:id="@+id/article_layout"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="110dp"
+                android:elevation="5dp">
 
                 <RelativeLayout
                     android:id="@+id/article_summary_layout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#2c3e50">
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/article">
 
                     <RelativeLayout
                         android:id="@+id/like_animation_layout"
@@ -85,22 +84,77 @@
 
                     </RelativeLayout>
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="30dp"
+                        android:layout_alignParentStart="true">
 
                         <TextView
                             android:id="@+id/main_title_text"
-                            style="@style/ogTitleStyle"
-                            android:text="title" />
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="20dp"
+                            android:text="title"
+                            android:maxLines="2"
+                            android:textColor="#fff"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/main_description_text"
-                            style="@style/ogDescriptionStyle"
-                            android:text="description" />
-                    </LinearLayout>
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/main_title_text"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/main_description_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:ellipsize="end"
+                                android:maxLines="3"
+                                android:text="description"
+                                android:textColor="#fff"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="34dp"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="#eee"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:text="READ MORE"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+
 
                     <Button
                         android:id="@+id/show_article_button"
@@ -108,71 +162,13 @@
                         android:layout_height="match_parent"
                         android:background="#00ffffff" />
 
-
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <net.steamcrafted.materialiconlib.MaterialIconView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                    android:id="@+id/share_article_icon"
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
-                                    android:layout_centerInParent="true"
-                                    android:padding="12dp"
-                                    app:materialIcon="share_variant"
-                                    app:materialIconColor="#fff"
-                                    app:materialIconSize="24dp" />
-                            </RelativeLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <net.steamcrafted.materialiconlib.MaterialIconView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
-                                    android:layout_centerInParent="true"
-                                    android:padding="12dp"
-                                    app:materialIcon="close_circle"
-                                    app:materialIconColor="#fff"
-                                    app:materialIconSize="24dp" />
-
-                                <Button
-                                    android:id="@+id/fab_exit_button"
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
-                                    android:layout_centerInParent="true"
-                                    android:background="#00ffffff" />
-                            </RelativeLayout>
-                        </LinearLayout>
 
 
-                    </LinearLayout>
-                </RelativeLayout>
+            </RelativeLayout>
 
-            </com.truizlop.fabreveallayout.FABRevealLayout>
+
 
         </RelativeLayout>
 
@@ -180,30 +176,30 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff">
+            android:background="#fff">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:gravity="center|top"
-                android:text="위로 당겨서 비슷한 기사 더보기"
-                android:textSize="16sp" />
+            <net.steamcrafted.materialiconlib.MaterialIconView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                app:materialIcon="apple_keyboard_control"
+                app:materialIconColor="#000"
+                app:materialIconSize="24dp" />
 
 
             <RelativeLayout
                 android:id="@+id/sliding_up_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"
                 android:background="#2c3e50"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:visibility="invisible">
 
                 <LinearLayout
-                    android:layout_marginTop="35dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:layout_marginTop="35dp"
                     android:orientation="vertical">
 
                     <TextView

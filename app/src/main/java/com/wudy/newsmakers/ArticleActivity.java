@@ -47,7 +47,7 @@ public class ArticleActivity extends Activity {
 
 
         mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.loadUrl(articleData.getOgUrl().replaceAll("entertain", "m.entertain"));
+        mWebView.loadUrl(articleData.getOgUrl());
         mWebView.setWebViewClient(new WebViewClient());
 
 

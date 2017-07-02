@@ -31,17 +31,12 @@ import com.bumptech.glide.Glide;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
-import com.truizlop.fabreveallayout.FABRevealLayout;
-import com.truizlop.fabreveallayout.OnRevealChangeListener;
 import com.wudy.newsmakers.ArticleActivity;
 import com.wudy.newsmakers.R;
 import com.wudy.newsmakers.opengraph.OpenGraph;
 import com.wudy.newsmakers.opengraph.OpenGraphVO;
 
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
-
-import com.sothree.slidinguppanel.SlidingUpPanelLayout;
-import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState;
 
 public class ParallaxFragment extends Fragment {
@@ -62,12 +57,10 @@ public class ParallaxFragment extends Fragment {
     private TextView slidngUpTitleText;
     private TextView pagerDescriptiontext;
     private String tempUrl;
-    private Button exitFabLayoutButton;
     private Button showArticleButton;
     private Button likeArticleButton;
-    private ImageView shareArticleButton;
+    //private ImageView shareArticleButton;
     private ImageView likeArticleImage;
-    private FABRevealLayout fabRevealLayout;
     private RelativeLayout likeAnimationLayout;
     private RelativeLayout articleSummaryLayout;
     private ImageView articleBottomLine;
@@ -86,12 +79,11 @@ public class ParallaxFragment extends Fragment {
         pagerImageView = (ImageView) v.findViewById(R.id.main_background_image);
         pagerTitletext = (TextView) v.findViewById(R.id.main_title_text);
         pagerDescriptiontext = (TextView) v.findViewById(R.id.main_description_text);
-        exitFabLayoutButton = (Button) v.findViewById(R.id.fab_exit_button);
+        showArticleButton = (Button) v.findViewById(R.id.show_article_button);
+//        shareArticleButton = (ImageView) v.findViewById(R.id.share_article_icon);
         likeArticleButton = (Button) v.findViewById(R.id.like_article_button);
-        shareArticleButton = (ImageView) v.findViewById(R.id.share_article_icon);
         slidngUpTitleText = (TextView) v.findViewById(R.id.article_title_text2);
         likeArticleImage = (ImageView) v.findViewById(R.id.like_article_icon);
-        showArticleButton = (Button) v.findViewById(R.id.show_article_button);
         likeAnimationLayout = (RelativeLayout) v.findViewById(R.id.like_animation_layout);
         articleSummaryLayout = (RelativeLayout) v.findViewById(R.id.article_summary_layout);
         articleBottomLine = (ImageView) v.findViewById(R.id.article_bottom_line);
@@ -99,8 +91,6 @@ public class ParallaxFragment extends Fragment {
 
         tempUrl = getArguments().getString("mainPagerUrl");
 
-        fabRevealLayout = (FABRevealLayout) v.findViewById(R.id.fab_reveal_layout);
-        configureFABReveal(fabRevealLayout);
 
         mHandler = new Handler();
         openGraphVO = new OpenGraphVO();
@@ -141,7 +131,11 @@ public class ParallaxFragment extends Fragment {
         mRunnable = new Runnable() {
             @Override
             public void run() {
-                Glide.with(getActivity()).load(openGraphVO.getOgImage()).into(pagerImageView);
+                try {
+                    Glide.with(getActivity()).load(openGraphVO.getOgImage()).into(pagerImageView);
+                }catch(Exception e){
+                    Log.e("glide","e:"+e);
+                }
                 pagerTitletext.setText(openGraphVO.getOgTitle());
                 slidngUpTitleText.setText(openGraphVO.getOgTitle());
                 pagerDescriptiontext.setText(openGraphVO.getOgDescription());
@@ -168,38 +162,30 @@ public class ParallaxFragment extends Fragment {
 
             }
         }.start();
-
-
-        exitFabLayoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fabRevealLayout.revealMainView();
-            }
-        });
-
-
-        shareArticleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int animationDuration = 700;
-                YoYo.with(Techniques.Shake)
-                        .duration(animationDuration)
-                        .repeat(1)
-                        .playOn(shareArticleButton);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        fabRevealLayout.revealMainView();
-                        Intent share = new Intent(android.content.Intent.ACTION_SEND);
-                        share.setType("text/plain");
-                        share.putExtra(Intent.EXTRA_SUBJECT, "News Maker");
-                        share.putExtra(Intent.EXTRA_TEXT, openGraphParser.getContent("url"));
-                        startActivity(Intent.createChooser(share, "Share link!"));
-                    }
-                }, (animationDuration / 4));
-            }
-        });
-
+//
+//
+//        shareArticleButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                int animationDuration = 700;
+//                YoYo.with(Techniques.Shake)
+//                        .duration(animationDuration)
+//                        .repeat(1)
+//                        .playOn(shareArticleButton);
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        fabRevealLayout.revealMainView();
+//                        Intent share = new Intent(android.content.Intent.ACTION_SEND);
+//                        share.setType("text/plain");
+//                        share.putExtra(Intent.EXTRA_SUBJECT, "News Maker");
+//                        share.putExtra(Intent.EXTRA_TEXT, openGraphParser.getContent("url"));
+//                        startActivity(Intent.createChooser(share, "Share link!"));
+//                    }
+//                }, (animationDuration / 4));
+//            }
+//        });
+//
 
         showArticleButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -208,7 +194,7 @@ public class ParallaxFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), ArticleActivity.class);
                 intent.putExtra("openGraphVO", openGraphVO);
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(getActivity(),
-                        Pair.create((View)articleSummaryLayout, ARTICLE_TITLE_VIEW),
+                        Pair.create((View)pagerTitletext, ARTICLE_TITLE_VIEW),
                         Pair.create((View)articleBottomLine, ARTICLE_WEB_VIEW));
 
                 startActivity(intent, options.toBundle());
@@ -267,21 +253,6 @@ public class ParallaxFragment extends Fragment {
 
 
         return v;
-    }
-
-
-
-
-    private void configureFABReveal(FABRevealLayout fabRevealLayout) {
-        fabRevealLayout.setOnRevealChangeListener(new OnRevealChangeListener() {
-            @Override
-            public void onMainViewAppeared(FABRevealLayout fabRevealLayout, View mainView) {
-            }
-
-            @Override
-            public void onSecondaryViewAppeared(final FABRevealLayout fabRevealLayout, View secondaryView) {
-            }
-        });
     }
 
     public void setAdapter(ParallaxAdapter catsAdapter) {

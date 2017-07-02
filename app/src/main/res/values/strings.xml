@@ -1,9 +1,3 @@
 <resources>
     <string name="app_name">NewsMakers</string>
-    <string name="temp_title">NewsMakersNewsMakersNewsMakersNewsMakersNewsMakers</string>
-    <string name="temp_content">좋아요 1 | 인기업 3</string>
-
-
-    <string name="demo_parallax_description">Image of a cat</string>
-    <string name="demo_parallax_plus">+</string>
 </resources>

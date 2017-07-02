@@ -10,13 +10,14 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.truizlop.fabreveallayout.FABRevealLayout;
-import com.truizlop.fabreveallayout.OnRevealChangeListener;
+import com.prof.rssparser.Article;
+import com.prof.rssparser.Parser;
 import com.wudy.newsmakers.dummy.Dummy;
 import com.wudy.newsmakers.pager.PagerTransFormer;
 import com.wudy.newsmakers.pager.ParallaxAdapter;
 import com.wudy.newsmakers.pager.ParallaxFragment;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -37,6 +38,10 @@ public class MainActivity extends FragmentActivity {
     private Runnable pageAnimationRunnable;
     private CircleIndicator indicator;
 
+
+
+    private String rssURL = "http://rss.etnews.com/Section901.xml";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,11 +49,41 @@ public class MainActivity extends FragmentActivity {
 
         viewPager = (ViewPager) findViewById(R.id.pager);
         indicator = (CircleIndicator) findViewById(R.id.indicator);
-        setMainParallaxPager();
-        setPagerDatas();
 
-        viewPager.setAdapter(mAdapter);
-        indicator.setViewPager(viewPager);
+        setMainParallaxPager();
+
+        Parser parser = new Parser();
+        parser.execute(rssURL);
+        parser.onFinish(new Parser.OnTaskCompleted() {
+
+            @Override
+            public void onTaskCompleted(ArrayList<Article> list) {
+                Log.e("pasrer","list length:"+list.size());
+
+
+                for(Article article:list){
+                    Log.e("article","article : "+article.toString());
+                }
+
+                setPagerDatas(list);
+
+                viewPager.setAdapter(mAdapter);
+                indicator.setViewPager(viewPager);
+
+
+            }
+
+            @Override
+            public void onError() {
+                //what to do in case of error
+            }
+        });
+
+
+
+
+
+
 
     }
 
@@ -62,7 +97,6 @@ public class MainActivity extends FragmentActivity {
 
                 if (!IS_ANIMATE_PAGER) {
                     viewPager.setScrollX(positionX);
-                    Log.e("scroll", "positionX:" + positionX);
                     positionX = positionXCount < ANIMATE_NEXT_PAGER_X ? positionXCount + 1 : (ANIMATE_NEXT_PAGER_X * 2) - positionXCount;
                     positionXCount++;
 
@@ -86,19 +120,36 @@ public class MainActivity extends FragmentActivity {
 
     }
 
-    private void setPagerDatas() {
+    private void setPagerDatas(ArrayList<Article> list) {
 
-        dummy = new Dummy();
         int index = 0;
-        for (String mainUrl : dummy.dummyURL) {
+        for (Article article : list) {
+            index++;
             Bundle tempBundle = new Bundle();
-            tempBundle.putString("mainPagerUrl", mainUrl);
+            tempBundle.putString("mainPagerUrl", article.getLink());
             ParallaxFragment parallaxFragment = new ParallaxFragment();
             parallaxFragment.setArguments(tempBundle);
             mAdapter.add(parallaxFragment);
+            if(index==10)
+                return;
         }
 
     }
+
+//    void setPagerDatas() {
+//
+//        dummy = new Dummy();
+//        int index = 0;
+//        for (String mainUrl : dummy.dummyURL) {
+//            Bundle tempBundle = new Bundle();
+//            tempBundle.putString("mainPagerUrl", mainUrl);
+//            ParallaxFragment parallaxFragment = new ParallaxFragment();
+//            parallaxFragment.setArguments(tempBundle);
+//            mAdapter.add(parallaxFragment);
+//        }
+//
+//    }
+//
 
     private void setMainParallaxPager() {
         viewPager.setBackgroundColor(0xFF000000);
