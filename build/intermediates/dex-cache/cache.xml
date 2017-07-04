@@ -30,12 +30,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/1003855/.android/build-cache/ed726ac962cd8d917b0da2c3030a0323c5e37ab0/output/jars/classes.jar"
+        jar="/Users/1003855/.android/build-cache/fe4c0e2baafaa561038c6c099dce355d07c819f0/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="25.0.0"
-        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
-        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_67b2b53d4fee2c010ae93c1a29d4b82fa0021d48/classes.dex" />
+        revision="26.0.0"
+        sha1="1db6784d006818fee2591f13b0bf09ac31a3d49a">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_60705e821afff62c00f38f4783615790eddf0276/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -75,6 +75,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/1003855/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.8.1/1eb6690b0c629d7000c77a72df5e822fb974f521/jsoup-1.8.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="1eb6690b0c629d7000c77a72df5e822fb974f521">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jsoup-1.8.1_4baaec6d9cbc5662e6994a09fb34112e3394c270/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/1003855/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlcleaner/htmlcleaner/2.21/bef19968c9f2b458981e44b0d79eeea754126f98/htmlcleaner-2.21.jar"
         jumboMode="true"
         optimize="true"
@@ -111,12 +120,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/1003855/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.4_9e41737a9336849e7165ae73e119c7c519c037ea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/1003855/.android/build-cache/48e7ceba983c35b419cc14528bed1bfba8297aaa/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_130b1a311123ba69e010d90681ce3222635c829f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_ce610abc3bbb8bc3ea46a18bb79c8c3d55650b62/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -147,11 +174,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/1003855/.android/build-cache/8c594425658f4af61f491a67e63f19ee9c83f2d0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="1acfba708364fb5bdb0ad5910d1ca8bb1125f645">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6ed4ce8c8fdf9d2424b330b169e54deaa70ef9a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/1003855/wudy-android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="3c65a23f3a0b6e00de5fb7e7a1ab515291d41fc6">
+        sha1="79401ad5f57ca9526d760de56a41ce8a76d05c11">
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_783fa47abbb1b5e333cd5e90d047494c19cb40fd/classes.dex" />
     </item>
     <item
@@ -173,6 +209,15 @@
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/pre-dexed/debug/classes_ebeb4a7a9c66d501745cc0908cac7456ec2a0562.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/1003855/.android/build-cache/d425a9cf528806b7cab0ab353466c653129e841f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="5b8aeb23fd9c464c7e92884bf639110f345a80fa">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_70b083b48343511aa9494a8875fb87825fa4ac69/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/1003855/.android/build-cache/d5836632886e2051c39825965fbc39a9339e1582/output/jars/classes.jar"
         jumboMode="false"
@@ -183,12 +228,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/1003855/.android/build-cache/de379dfbfe14775111762920f1544642ad77252e/output/jars/classes.jar"
+        jar="/Users/1003855/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.5/2001db51c131e555bafdb77fc52af6a9408c505e/jdom2-2.0.5.jar"
         jumboMode="true"
         optimize="true"
-        revision="25.0.0"
-        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
-        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_820296ed9975a00689a157a5f7c705eae75d6a39/classes.dex" />
+        revision="26.0.0"
+        sha1="2001db51c131e555bafdb77fc52af6a9408c505e">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/jdom2-2.0.5_9244002ef7197af779097cf6d21bf175abc5dd12/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -210,6 +255,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/1003855/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_fe81f0dec57d3dd3c37eba7d0707d9691ac81192/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/1003855/.android/build-cache/038a2f8d9c37563d07a6c13877201a53f6cbb7ec/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -225,6 +279,15 @@
         revision="25.0.0"
         sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/pre-dexed/debug/classes_56823d97c6acd11d9e5ad5833599d3ca24ccdc01.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/.android/build-cache/8eabbdef642529ea90df0751ca066297019929b9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="ab8a4903076897a8fe029433ba0c3c3f958712ce">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_02d85432361b21afe8859dbaaf82d5e7cbe93229/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -270,6 +333,15 @@
         revision="25.0.0"
         sha1="952944218ecedea1554a513dec0c14d570642843">
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/pre-dexed/debug/classes_02fdfb3dd1bf9f11346050b83be94b267e90ccbf.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/.android/build-cache/508da09fae62e570a528f0e68b82c18af271eb4e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d12d394cd6f9e7bae89d6d1e84f91892492b38e4">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b35f60331f08329620bc6de65c70dcb574ea90ff/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -335,6 +407,15 @@
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/pre-dexed/debug/classes_4b863e0d89c6f935620d36f7828d076dd8846d97.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/1003855/.android/build-cache/d62aeada897c2adef132353702d0cd353d081c60/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_78dcd4451b42b63f5bf8b5498489b1a1664921a6/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/1003855/.android/build-cache/cbfc9fdd34e4a23132ed42dad5f25d2e261151e7/output/jars/classes.jar"
         jumboMode="false"
@@ -371,6 +452,24 @@
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/pre-dexed/debug/classes_4af183090a4b0d319e88a496a8b3236227c1767c.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/1003855/.android/build-cache/fe4c0e2baafaa561038c6c099dce355d07c819f0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1db6784d006818fee2591f13b0bf09ac31a3d49a">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_60705e821afff62c00f38f4783615790eddf0276/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlcleaner/htmlcleaner/2.21/bef19968c9f2b458981e44b0d79eeea754126f98/htmlcleaner-2.21.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="bef19968c9f2b458981e44b0d79eeea754126f98">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/htmlcleaner-2.21_aa61c19113948556f8721b76d2815f411b65b5fc/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/1003855/.android/build-cache/ed726ac962cd8d917b0da2c3030a0323c5e37ab0/output/jars/classes.jar"
         jumboMode="false"
@@ -398,6 +497,15 @@
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_ce610abc3bbb8bc3ea46a18bb79c8c3d55650b62/classes.dex" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/1003855/.android/build-cache/2a2efc30d626117f9692c76baf5be60832c664dd/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a73b24a82e860ae409181afee75925a04a03aed3">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0751197a1ae866fd42a88d27b75facb85b4260f3/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/1003855/.android/build-cache/038089447151af9362ba9d658d4b850659ffb401/output/jars/classes.jar"
         jumboMode="false"
@@ -405,6 +513,24 @@
         revision="25.0.0"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/pre-dexed/debug/classes_5f5fc53dfd8a92e80351b6dc373e4fdb427ffe3e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/.android/build-cache/2a2efc30d626117f9692c76baf5be60832c664dd/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a73b24a82e860ae409181afee75925a04a03aed3">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0751197a1ae866fd42a88d27b75facb85b4260f3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/.android/build-cache/8c594425658f4af61f491a67e63f19ee9c83f2d0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1acfba708364fb5bdb0ad5910d1ca8bb1125f645">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6ed4ce8c8fdf9d2424b330b169e54deaa70ef9a9/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -423,6 +549,24 @@
         revision="26.0.0"
         sha1="33c5972f2abc9d2a1f7f58a40a526d339eb3d219">
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/pre-dexed/debug/classes_49e4b975aead034c93dde9ee20ff6f65ced18b6a.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/wudy-android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e98a192e915465fa583a00c208582300653b63ad">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_783fa47abbb1b5e333cd5e90d047494c19cb40fd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.2.0_50e40085d83be26e2c876a5061c33acfd3904276/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -471,21 +615,30 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/1003855/.android/build-cache/8715db6ca849fc5b594ff8e4fa7b8a370171642c/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="33c5972f2abc9d2a1f7f58a40a526d339eb3d219">
-        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_49e4b975aead034c93dde9ee20ff6f65ced18b6a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/1003855/.android/build-cache/932d2b72016c7a856a2063c35d0818b47332257c/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_56823d97c6acd11d9e5ad5833599d3ca24ccdc01/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/wudy-android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_5f37f19ebebd6f85a8bcda97f4b859940501ad10/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/.android/build-cache/8eabbdef642529ea90df0751ca066297019929b9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ab8a4903076897a8fe029433ba0c3c3f958712ce">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_02d85432361b21afe8859dbaaf82d5e7cbe93229/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -549,6 +702,15 @@
         revision="25.0.0"
         sha1="023ee503b631f69511e335a061ea008f8da60f40">
         <dex dex="/Users/1003855/wudy-android/app/build/intermediates/pre-dexed/debug/support-annotations-26.0.0-alpha1_94ea3ea15fdbaab89659d716ed2742d1d926acc9.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/1003855/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.16.16/245b50f714bf89ed7659266ace12f9e509d13551/lombok-1.16.16.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="245b50f714bf89ed7659266ace12f9e509d13551">
+        <dex dex="/Users/1003855/wudy-android/app/build/intermediates/transforms/dex/debug/folders/1000/10/lombok-1.16.16_f49adb2963b1ce125699533c7c5fa50ed09f6e07/classes.dex" />
     </item>
     <item
         is-multidex="false"
