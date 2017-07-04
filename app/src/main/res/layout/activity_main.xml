@@ -27,6 +27,47 @@
         android:layout_height="25dp"/>
 
 
+    <RelativeLayout
+        android:id="@+id/splash_fullpage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back_splash"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="#30000000"
+            />
+
+        <TextView
+            android:id="@+id/splash_title_text"
+            android:text="NM"
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
+            android:textSize="200sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="#fff"
+            android:layout_below="@id/splash_title_text"
+            />
+
+
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
 

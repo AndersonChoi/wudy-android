@@ -1,5 +1,6 @@
 package com.wudy.newsmakers;
 
+import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,6 +10,10 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewAnimationUtils;
+import android.view.animation.Animation;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.prof.rssparser.Article;
 import com.prof.rssparser.Parser;
@@ -28,7 +33,7 @@ public class MainActivity extends FragmentActivity {
     public final static String ARTICLE_WEB_VIEW = "ARTICLE_WEB_VIEW";
 
     private static boolean IS_ANIMATE_PAGER = false;
-    private static int ANIMATE_NEXT_PAGER_X = 70;
+    private static int ANIMATE_NEXT_PAGER_X = 110;
     private ViewPager viewPager;
     private ParallaxAdapter mAdapter;
     private Dummy dummy;
@@ -39,6 +44,7 @@ public class MainActivity extends FragmentActivity {
     private CircleIndicator indicator;
 
 
+    private RelativeLayout splashLayout;
 
     private String rssURL = "http://rss.etnews.com/Section901.xml";
 
@@ -49,6 +55,7 @@ public class MainActivity extends FragmentActivity {
 
         viewPager = (ViewPager) findViewById(R.id.pager);
         indicator = (CircleIndicator) findViewById(R.id.indicator);
+        splashLayout = findViewById(R.id.splash_fullpage_layout);
 
         setMainParallaxPager();
 
@@ -58,11 +65,11 @@ public class MainActivity extends FragmentActivity {
 
             @Override
             public void onTaskCompleted(ArrayList<Article> list) {
-                Log.e("pasrer","list length:"+list.size());
+                Log.e("pasrer", "list length:" + list.size());
 
 
-                for(Article article:list){
-                    Log.e("article","article : "+article.toString());
+                for (Article article : list) {
+                    Log.e("article", "article : " + article.toString());
                 }
 
                 setPagerDatas(list);
@@ -70,6 +77,57 @@ public class MainActivity extends FragmentActivity {
                 viewPager.setAdapter(mAdapter);
                 indicator.setViewPager(viewPager);
 
+                int cx = (splashLayout.getLeft() + splashLayout.getRight()) / 2;
+                int cy = (splashLayout.getTop() + splashLayout.getBottom()) / 2;
+                int startRadius = Math.max(splashLayout.getWidth(), splashLayout.getHeight());
+                int finalRadius = 0;
+                Animator anim =
+                        ViewAnimationUtils.createCircularReveal(splashLayout, cx, cy, startRadius, finalRadius);
+                splashLayout.setVisibility(View.VISIBLE);
+                anim.setDuration(2200);
+                anim.start();
+                anim.addListener(new Animator.AnimatorListener() {
+
+                    public void onAnimationStart(Animator animation) {
+                    }
+
+                    public void onAnimationRepeat(Animator animation) {
+                    }
+
+                    public void onAnimationEnd(Animator animation) {
+                        splashLayout.setVisibility(View.GONE);
+
+
+                        pageAnimationRunnable = new Runnable() {
+                            @Override
+                            public void run() {
+
+                                viewPager.setScrollX(positionX);
+                                positionX = positionXCount < ANIMATE_NEXT_PAGER_X ? positionXCount + 1 : (ANIMATE_NEXT_PAGER_X * 2) - positionXCount;
+                                positionXCount++;
+
+                                if (positionX == 0) {
+                                    return;
+                                }
+
+                                if (positionX == ANIMATE_NEXT_PAGER_X) {
+                                    pageAnimationHandler.postDelayed(pageAnimationRunnable, 100);
+                                } else if (positionXCount < ANIMATE_NEXT_PAGER_X) {
+                                    pageAnimationHandler.postDelayed(pageAnimationRunnable, 1);
+                                } else if (positionXCount > ANIMATE_NEXT_PAGER_X) {
+                                    pageAnimationHandler.postDelayed(pageAnimationRunnable, 8);
+                                }
+                            }
+                        };
+                        pageAnimationHandler = new Handler();
+                        pageAnimationHandler.postDelayed(pageAnimationRunnable, 10);
+
+
+                    }
+
+                    public void onAnimationCancel(Animator animation) {
+                    }
+                });
 
             }
 
@@ -80,43 +138,12 @@ public class MainActivity extends FragmentActivity {
         });
 
 
-
-
-
-
-
     }
 
     @Override
     public void onResume() {
         super.onResume();
 
-        pageAnimationRunnable = new Runnable() {
-            @Override
-            public void run() {
-
-                if (!IS_ANIMATE_PAGER) {
-                    viewPager.setScrollX(positionX);
-                    positionX = positionXCount < ANIMATE_NEXT_PAGER_X ? positionXCount + 1 : (ANIMATE_NEXT_PAGER_X * 2) - positionXCount;
-                    positionXCount++;
-
-                    if (positionX == 0) {
-                        IS_ANIMATE_PAGER = true;
-                        return;
-                    }
-
-                    if (positionX == ANIMATE_NEXT_PAGER_X) {
-                        pageAnimationHandler.postDelayed(pageAnimationRunnable, 100);
-                    } else if (positionXCount < ANIMATE_NEXT_PAGER_X) {
-                        pageAnimationHandler.postDelayed(pageAnimationRunnable, 1);
-                    } else if (positionXCount > ANIMATE_NEXT_PAGER_X) {
-                        pageAnimationHandler.postDelayed(pageAnimationRunnable, 8);
-                    }
-                }
-            }
-        };
-        pageAnimationHandler = new Handler();
-        pageAnimationHandler.postDelayed(pageAnimationRunnable, 1000);
 
     }
 
@@ -130,26 +157,11 @@ public class MainActivity extends FragmentActivity {
             ParallaxFragment parallaxFragment = new ParallaxFragment();
             parallaxFragment.setArguments(tempBundle);
             mAdapter.add(parallaxFragment);
-            if(index==10)
+            if (index == 10)
                 return;
         }
 
     }
-
-//    void setPagerDatas() {
-//
-//        dummy = new Dummy();
-//        int index = 0;
-//        for (String mainUrl : dummy.dummyURL) {
-//            Bundle tempBundle = new Bundle();
-//            tempBundle.putString("mainPagerUrl", mainUrl);
-//            ParallaxFragment parallaxFragment = new ParallaxFragment();
-//            parallaxFragment.setArguments(tempBundle);
-//            mAdapter.add(parallaxFragment);
-//        }
-//
-//    }
-//
 
     private void setMainParallaxPager() {
         viewPager.setBackgroundColor(0xFF000000);
@@ -157,7 +169,6 @@ public class MainActivity extends FragmentActivity {
         mAdapter = new ParallaxAdapter(getSupportFragmentManager());
         mAdapter.setPager(viewPager);
     }
-
 
 
 }
